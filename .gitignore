@@ -1,0 +1,4 @@
+# Panopticon gitignore
+*.exe
+# make sure we're not including the actual database file lol
+*.sqlite
