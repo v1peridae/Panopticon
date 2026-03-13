@@ -68,14 +68,6 @@ func readConfig(configFilepath string) map[string]any {
 	return cm
 }
 
-func test_configFile() {
-	fmt.Println("Testing config file parse:")
-	fmt.Println("Reading ../test.config")
-	test_cm := readConfig("../test.config")
-	fmt.Println("Database filepath:", test_cm["DATABASE_FILEPATH"])
-	fmt.Println("REST port:", test_cm["REST_PORT"])
-}
-
 func startup() (*sql.DB, error) {
 	// tasks to run on startup:
 	// 1. read the config file and set the configMap to the relevant values
@@ -127,8 +119,6 @@ func startup() (*sql.DB, error) {
 }
 
 func main() {
-	test_configFile()
-	return
 	db, startupErr := startup() // init with startup, make sure we have our database connection and wait for any errors
 	defer cleanup(db)           // make sure we're cleaning up after ourselves when things are done, properly close the database connection
 	if startupErr != nil {
