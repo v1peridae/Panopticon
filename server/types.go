@@ -12,6 +12,8 @@ type Watchgroup struct {
 }
 
 type Notification struct {
+	ID          int
 	Header      string
 	Description string
+	Status      string
 }

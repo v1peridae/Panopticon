@@ -11,10 +11,10 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	"log" // used for logging, mostly with panic and fatal
-	"os"  // necessary to create, eval, and read files
-	"strings"
+	"log"     // used for logging, mostly with panic and fatal
+	"os"      // necessary to create, eval, and read files
 	"strconv" // for parsing
+	"strings"
 )
 
 // function called at startup to load the config file or create one if it doesn't exist
